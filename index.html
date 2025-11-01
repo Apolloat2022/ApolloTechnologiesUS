@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Apollo Technologies US | B2B AI Agents for SaaS & Service Firms</title>
   <meta name="description" content="Deploy intelligent AI agents in 4–6 weeks. GDPR-ready, human-in-the-loop, no-nonsense AI.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -27,126 +28,106 @@
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
   </style>
 </head>
-<body class="bg-brand-dark text-white min-h-screen">
-  <!-- Logo -->
-  <div class="container mx-auto px-4 pt-8">
- <img src="public/logo.png" alt="Apollo Technologies US" class="h-8 w-auto mx-auto mb-4 opacity-80" />
-  </div>
+<body class="bg-brand-dark text-white min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <img src="public/logo.png" alt="Apollo Technologies US" class="h-8 md:h-10 w-auto" />
+      <span class="text-lg font-bold hidden md:block">Apollo Technologies US</span>
+    </div>
+    <div class="hidden md:flex space-x-6 text-sm">
+      <a href="#home" class="hover:text-brand-blue transition">Home</a>
+      <a href="#solutions" class="hover:text-brand-blue transition">Solutions</a>
+      <a href="#services" class="hover:text-brand-blue transition">Services</a>
+      <a href="#about" class="hover:text-brand-blue transition">About</a>
+      <a href="#contact" class="hover:text-brand-blue transition">Contact</a>
+    </div>
+    <a href="https://calendly.com/revanaglobal/30min" class="px-4 py-2 bg-brand-blue rounded-lg text-sm font-medium hover:bg-blue-400 transition">
+      Book a Call
+    </a>
+  </nav>
 
   <!-- Hero -->
-  <header class="container mx-auto px-4 py-16 text-center">
-    <div id="hero-content"></div>
-  </header>
+  <section id="home" class="container mx-auto px-4 py-16 text-center">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">
+      AI That Works for Your Business,<br />Not Just Your Chat Window
+    </h1>
+    <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-10 fade-in" style="animation-delay: 0.2s">
+      We help B2B SaaS companies and professional service firms embed intelligent AI agents that drive user success, reduce admin work, and accelerate growth. Delivered in 4 to 6 weeks.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in" style="animation-delay: 0.4s">
+      <a href="#solutions" class="px-6 py-3 bg-brand-blue rounded-lg font-semibold hover:bg-blue-400 transition text-center">
+        For SaaS Companies
+      </a>
+      <a href="#solutions" class="px-6 py-3 bg-gray-800 rounded-lg font-semibold hover:bg-gray-700 transition text-center">
+        For Service Firms
+      </a>
+    </div>
+  </section>
 
   <!-- Trust Badges -->
-  <section class="container mx-auto px-4 py-12">
+  <section class="container mx-auto px-4 py-8">
     <div class="flex flex-wrap justify-center gap-6">
-      <div class="bg-gray-900 px-6 py-4 rounded-xl flex items-center gap-3 fade-in" style="animation-delay: 0s">
-        <span class="text-2xl">⚡</span>
-        <span>7–10 Day Deployment</span>
-      </div>
-      <div class="bg-gray-900 px-6 py-4 rounded-xl flex items-center gap-3 fade-in" style="animation-delay: 0.1s">
-        <span class="text-2xl">👥</span>
-        <span>Human-in-the-Loop by Default</span>
-      </div>
-      <div class="bg-gray-900 px-6 py-4 rounded-xl flex items-center gap-3 fade-in" style="animation-delay: 0.2s">
+      <div class="bg-gray-900 px-6 py-4 rounded-xl flex items-center gap-3">
         <span class="text-2xl">🛡️</span>
         <span>GDPR-Ready Data Handling</span>
       </div>
-      <div class="bg-gray-900 px-6 py-4 rounded-xl flex items-center gap-3 fade-in" style="animation-delay: 0.3s">
+      <div class="bg-gray-900 px-6 py-4 rounded-xl flex items-center gap-3">
+        <span class="text-2xl">⚡</span>
+        <span>7–10 Day Deployment</span>
+      </div>
+      <div class="bg-gray-900 px-6 py-4 rounded-xl flex items-center gap-3">
+        <span class="text-2xl">👥</span>
+        <span>Human-in-the-Loop by Default</span>
+      </div>
+      <div class="bg-gray-900 px-6 py-4 rounded-xl flex items-center gap-3">
         <span class="text-2xl">🧩</span>
         <span>No-Code, No-Nonsense AI</span>
       </div>
     </div>
   </section>
 
-  <!-- Demo -->
-  <section class="container mx-auto px-4 py-20 text-center">
-    <h2 class="text-3xl md:text-4xl font-bold mb-6">See AI in Action</h2>
-    <p class="text-gray-300 max-w-2xl mx-auto mb-10">
-      Watch how our AI agent turns a client inquiry into a branded proposas.
-    </p>
-    <div class="bg-gray-900 rounded-2xl p-6 max-w-3xl mx-auto border border-gray-800">
-      <img src="public/aiauto.png" alt="AI workflow automation demo" class="w-full rounded-lg" />
-      <p class="mt-4 text-sm text-gray-400">
-        Client inquiry → AI pulls CRM data → Generates proposal → Human reviews → Sent
-      </p>
+  <!-- Solutions -->
+  <section id="solutions" class="container mx-auto px-4 py-16">
+    <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+      <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800">
+        <h3 class="text-2xl font-bold mb-4">SaaS Companies</h3>
+        <p class="text-gray-300 mb-6">Embed in-app copilots that boost retention and guide users to success</p>
+        <a href="#services" class="text-brand-blue hover:underline">Learn More →</a>
+      </div>
+      <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800">
+        <h3 class="text-2xl font-bold mb-4">Service Firms</h3>
+        <p class="text-gray-300 mb-6">Automate proposals, reporting and admin work to recover 10+ hours per week</p>
+        <a href="#services" class="text-brand-blue hover:underline">Learn More →</a>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="border-t border-gray-800 py-12">
-    <div class="container mx-auto px-4 text-center text-gray-400">
-      <img src="public/logo.png" alt="Apollo Technologies US" class="h-8 w-auto mx-auto mb-4 opacity-80" />
-      <p>© 2025 Apollo Technologies US. All rights reserved.</p>
-      <p class="mt-2">7511 Main Street, Suite 200, Frisco, TX 75034</p>
-      <p class="mt-1">Robinpandey@apollotechnologiesus.com | 469 554 9909</p>
+  <!-- Services -->
+  <section id="services" class="container mx-auto px-4 py-16">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Our AI Services</h2>
+      <p class="text-gray-300">We build vertical-specific AI agents that solve real business problems, fast.</p>
     </div>
-  </footer>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+        <h3 class="text-xl font-bold mb-3">AI Agents and Copilots</h3>
+        <p class="text-gray-300">Intelligent assistants that guide users, answer questions, and drive adoption within your applications.</p>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+        <h3 class="text-xl font-bold mb-3">Workflow Automation</h3>
+        <p class="text-gray-300">AI-powered automation for proposals, reporting, and administrative tasks that save your team hours.</p>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-xl border border-gray-800">
+        <h3 class="text-xl font-bold mb-3">Integration and Deployment</h3>
+        <p class="text-gray-300">Seamless integration with your existing tools and platforms, delivered in 4 to 6 weeks.</p>
+      </div>
+    </div>
+  </section>
 
-  <!-- AI Copilot -->
-  <iframe
-    src="https://app.vectorshift.ai/chatbots/deployed/67dcdcc59e912624fc8f0430"
-    class="fixed bottom-6 right-6 w-80 h-96 rounded-xl shadow-2xl border border-gray-800 z-50 hidden md:block"
-    title="Apollo AI Copilot"
-  ></iframe>
-
-  <!-- Personalization Logic -->
-  <script>
-    function getAudience() {
-      const urlParams = new URLSearchParams(window.location.search);
-      return urlParams.get('audience') || sessionStorage.getItem('audience');
-    }
-
-    function setAudience(type) {
-      sessionStorage.setItem('audience', type);
-      window.history.pushState({}, '', `?audience=${type}`);
-      renderHero(type);
-    }
-
-    function renderHero(audience) {
-      const hero = document.getElementById('hero-content');
-      if (!audience) {
-        hero.innerHTML = `
-          <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">
-            AI That Works for Your Business,<br />Not Just Your Chat Window
-          </h1>
-          <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-10 fade-in" style="animation-delay: 0.2s">
-            We help B2B SaaS companies and professional service firms embed intelligent AI agents that drive user success, reduce admin work, and accelerate growth. Delivered in 4 to 6 weeks.
-          </p>
-          <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in" style="animation-delay: 0.4s">
-            <button onclick="setAudience('saas')" class="px-6 py-3 bg-brand-blue rounded-lg font-semibold hover:bg-blue-400 transition">
-              I’m a SaaS company
-            </button>
-            <button onclick="setAudience('service')" class="px-6 py-3 bg-gray-800 rounded-lg font-semibold hover:bg-gray-700 transition">
-              I run a service firm
-            </button>
-          </div>
-        `;
-      } else {
-        const isSaaS = audience === 'saas';
-        hero.innerHTML = `
-          <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">
-            ${isSaaS ? 'Embed AI Copilots That Boost SaaS Retention' : 'Recover 10+ Hours/Week for Your Service Team'}
-          </h1>
-          <p class="text-xl text-gray-300 mb-8 fade-in" style="animation-delay: 0.2s">
-            ${isSaaS 
-              ? 'Guide users to success, reduce churn, and drive feature adoption—in 4–6 weeks.' 
-              : 'Automate proposals, reporting, and admin with secure, human-reviewed AI.'}
-          </p>
-          <a href="https://calendly.com/revanaglobal/30min" 
-             class="inline-block px-8 py-4 bg-brand-blue rounded-lg font-bold text-lg hover:bg-blue-400 transition fade-in"
-             style="animation-delay: 0.4s">
-            Book a Call →
-          </a>
-        `;
-      }
-    }
-
-    // Initialize
-    document.addEventListener('DOMContentLoaded', () => {
-      renderHero(getAudience());
-    });
-  </script>
-</body>
-</html>
+  <!-- Demo -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="max-w-4xl mx-auto text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">How Our AI Agent Automates Proposals</h2>
+      <p class="text-gray-300 mb-6">Secure, fast, and built around your business rules
