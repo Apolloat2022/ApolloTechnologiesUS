@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apollo Technologies US | B2B AI Agents for SaaS & Service Firms</title>
+  <meta name="description" content="Deploy intelligent AI agents in 4–6 weeks. GDPR-ready, human-in-the-loop, no-nonsense AI.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0A0F2C',
+              blue: '#00A8FF',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .fade-in { animation: fadeIn 0.6s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body class="bg-brand-dark text-white min-h-screen">
+  <!-- Logo -->
+  <div class="container mx-auto px-4 pt-8">
+    <img src="logo.png" alt="Apollo Technologies US" class="h-10 w-auto" />
+  </div>
+
+  <!-- Hero -->
+  <header class="container mx-auto px-4 py-16 text-center">
+    <div id="hero-content"></div>
+  </header>
+
+  <!-- Trust Badges -->
+  <section class="container mx-auto px-4 py-12">
+    <div class="flex flex-wrap justify-center gap-6">
+      <div class="bg-gray-900 px-6 py-4 rounded-xl flex items-center gap-3 fade-in" style="animation-delay: 0s">
+        <span class="text-2xl">⚡</span>
+        <span>7–10 Day Deployment</span>
+      </div>
+      <div class="bg-gray-900 px-6 py-4 rounded-xl flex items-center gap-3 fade-in" style="animation-delay: 0.1s">
+        <span class="text-2xl">👥</span>
+        <span>Human-in-the-Loop by Default</span>
+      </div>
+      <div class="bg-gray-900 px-6 py-4 rounded-xl flex items-center gap-3 fade-in" style="animation-delay: 0.2s">
+        <span class="text-2xl">🛡️</span>
+        <span>GDPR-Ready Data Handling</span>
+      </div>
+      <div class="bg-gray-900 px-6 py-4 rounded-xl flex items-center gap-3 fade-in" style="animation-delay: 0.3s">
+        <span class="text-2xl">🧩</span>
+        <span>No-Code, No-Nonsense AI</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section class="container mx-auto px-4 py-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">See AI in Action</h2>
+    <p class="text-gray-300 max-w-2xl mx-auto mb-10">
+      Watch how our AI agent turns a client inquiry into a branded proposal—in seconds.
+    </p>
+    <div class="bg-gray-900 rounded-2xl p-6 max-w-3xl mx-auto border border-gray-800">
+      <img src="aiauto.png" alt="AI workflow automation demo" class="w-full rounded-lg" />
+      <p class="mt-4 text-sm text-gray-400">
+        Client inquiry → AI pulls CRM data → Generates proposal → Human reviews → Sent
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-800 py-12">
+    <div class="container mx-auto px-4 text-center text-gray-400">
+      <img src="logo.png" alt="Apollo Technologies US" class="h-8 w-auto mx-auto mb-4 opacity-80" />
+      <p>© 2025 Apollo Technologies US. All rights reserved.</p>
+      <p class="mt-2">7511 Main Street, Suite 200, Frisco, TX 75034</p>
+      <p class="mt-1">Robinpandey@apollotechnologiesus.com | 469 554 9909</p>
+    </div>
+  </footer>
+
+  <!-- AI Copilot -->
+  <iframe
+    src="https://app.vectorshift.ai/chatbots/deployed/67dcdcc59e912624fc8f0430"
+    class="fixed bottom-6 right-6 w-80 h-96 rounded-xl shadow-2xl border border-gray-800 z-50 hidden md:block"
+    title="Apollo AI Copilot"
+  ></iframe>
+
+  <!-- Personalization Logic -->
+  <script>
+    function getAudience() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('audience') || sessionStorage.getItem('audience');
+    }
+
+    function setAudience(type) {
+      sessionStorage.setItem('audience', type);
+      window.history.pushState({}, '', `?audience=${type}`);
+      renderHero(type);
+    }
+
+    function renderHero(audience) {
+      const hero = document.getElementById('hero-content');
+      if (!audience) {
+        hero.innerHTML = `
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">
+            AI That Works for Your Business,<br />Not Just Your Chat Window
+          </h1>
+          <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-10 fade-in" style="animation-delay: 0.2s">
+            We help B2B SaaS companies and professional service firms embed intelligent AI agents that drive user success, reduce admin work, and accelerate growth. Delivered in 4 to 6 weeks.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in" style="animation-delay: 0.4s">
+            <button onclick="setAudience('saas')" class="px-6 py-3 bg-brand-blue rounded-lg font-semibold hover:bg-blue-400 transition">
+              I’m a SaaS company
+            </button>
+            <button onclick="setAudience('service')" class="px-6 py-3 bg-gray-800 rounded-lg font-semibold hover:bg-gray-700 transition">
+              I run a service firm
+            </button>
+          </div>
+        `;
+      } else {
+        const isSaaS = audience === 'saas';
+        hero.innerHTML = `
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">
+            ${isSaaS ? 'Embed AI Copilots That Boost SaaS Retention' : 'Recover 10+ Hours/Week for Your Service Team'}
+          </h1>
+          <p class="text-xl text-gray-300 mb-8 fade-in" style="animation-delay: 0.2s">
+            ${isSaaS 
+              ? 'Guide users to success, reduce churn, and drive feature adoption—in 4–6 weeks.' 
+              : 'Automate proposals, reporting, and admin with secure, human-reviewed AI.'}
+          </p>
+          <a href="https://calendly.com/revanaglobal/30min" 
+             class="inline-block px-8 py-4 bg-brand-blue rounded-lg font-bold text-lg hover:bg-blue-400 transition fade-in"
+             style="animation-delay: 0.4s">
+            Book a Call →
+          </a>
+        `;
+      }
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      renderHero(getAudience());
+    });
+  </script>
+</body>
+</html>
